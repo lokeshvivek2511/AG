@@ -2,7 +2,9 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
-import CounterSection from './CounterSection'
+
+import agfirstpic from '../../public/Reference_Image/ag_firstpic.jpeg'
+// import CounterSection from './CounterSection'
 
 // Split text into animatable word spans
 function WordReveal({ text, className = '' }) {
@@ -67,10 +69,10 @@ export default function Hero() {
       <div className="absolute right-0 top-1/4 w-2/3 h-3/4 bg-hero-glow pointer-events-none" />
 
       {/* Floating shapes */}
-      <FloatingShape size="120px" top="15%" left="5%"  opacity={0.3} delay={0}   />
-      <FloatingShape size="80px"  top="60%" left="2%"  opacity={0.2} delay={3}   />
-      <FloatingShape size="200px" top="10%" right="8%" opacity={0.15} delay={1.5} />
-      <FloatingShape size="60px"  top="75%" right="12%" opacity={0.25} delay={4}  />
+      <FloatingShape size="120px" top="15%" left="5%"  opacity={0.8} delay={0}   />
+      <FloatingShape size="80px"  top="60%" left="2%"  opacity={0.7} delay={3}   />
+      <FloatingShape size="160px" top="10%" right="8%" opacity={0.6} delay={1.5} />
+      <FloatingShape size="60px"  top="75%" right="12%" opacity={0.5} delay={4}  />
 
       {/* Hexagon accent */}
       <svg
@@ -122,15 +124,15 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <CounterSection />
+          {/* <CounterSection /> */}
         </div>
 
         {/* Right image */}
-        <div className="hero-image hidden lg:block">
+        <div className="hero-image  lg:block">
           <div className="relative">
             <div className="absolute -inset-3 bg-brand-blue/10 rounded-2xl blur-xl pointer-events-none" />
             <img
-              src="https://placehold.co/800x600/111B30/1E6FE8?text=Engineering+Excellence"
+              src={agfirstpic}
               alt="Engineering Excellence"
               loading="eager"
               className="relative w-full rounded-2xl border border-brand-border"

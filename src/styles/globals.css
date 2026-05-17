@@ -1,21 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
-
 :root {
-  --color-bg-primary:    #0A0F1E;
-  --color-bg-secondary:  #0D1526;
-  --color-bg-card:       #111B30;
-  --color-border:        #1E2D4A;
-  --color-blue:          #1E6FE8;
-  --color-indigo:        #4F46E5;
-  --color-cyan:          #06B6D4;
-  --color-text-primary:  #E8F0FF;
-  --color-text-muted:    #8A9DC0;
+  --color-bg-primary:    #FFFFFF;
+  --color-bg-secondary:  #F4F6FB;
+  --color-bg-card:       #FFFFFF;
+  --color-border:        #E2E8F0;
+  --color-blue:          #fb9511;
+  --color-indigo:        #3B82F6;
+  --color-cyan:          #0EA5E9;
+  --color-text-primary:  #162a0f;
+  --color-text-muted:    #64748B;
   --color-orange:        #F97316;
   --color-success:       #10B981;
+  --color-test:       #8bf2a5;
 }
 
 html {
@@ -44,22 +45,22 @@ body {
   background: var(--color-indigo);
 }
 
-/* Noise texture overlay for hero */
+/* Noise texture overlay for hero — very subtle on light bg */
 .hero-noise::after {
   content: '';
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  opacity: 0.015;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Mesh grid pattern */
+/* Mesh grid — lighter on white background */
 .mesh-grid {
   background-image:
-    linear-gradient(rgba(30, 111, 232, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 111, 232, 0.07) 1px, transparent 1px);
+    linear-gradient(rgba(108, 71, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 71, 255, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -68,9 +69,10 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-blue), var(--color-indigo), transparent);
   margin: 0;
+  opacity: 0.3;
 }
 
-/* Word reveal animation target */
+/* Word reveal animation */
 .word-reveal {
   display: inline-block;
   overflow: hidden;
@@ -94,13 +96,14 @@ body {
   animation: floatShape 12s ease-in-out infinite;
 }
 
-/* Card hover glow */
+/* Card styles — light mode uses shadow instead of dark bg */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
 }
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 30px rgba(30, 111, 232, 0.25);
+  box-shadow: 0 4px 28px rgba(108, 71, 255, 0.18);
 }
 
 /* Stagger reveal base state */
@@ -148,4 +151,24 @@ body {
 }
 .loader-exit {
   animation: loaderFadeOut 0.5s ease forwards;
+}
+
+/* Hero section light background with subtle purple tint */
+.hero-light {
+  background: linear-gradient(135deg, #F8F7FF 0%, #EEF2FF 50%, #F0F9FF 100%);
+}
+
+/* Tag/pill badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(108, 71, 255, 0.08);
+  color: var(--color-blue);
+  border: 1px solid rgba(108, 71, 255, 0.2);
 }

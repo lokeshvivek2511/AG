@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { Loader2 } from 'lucide-react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 export default function ContactForm() {
   const {
@@ -12,22 +13,60 @@ export default function ContactForm() {
   } = useForm()
 
   const onSubmit = async (data) => {
-    // Simulate async submission (no backend)
-    await new Promise(resolve => setTimeout(resolve, 1200))
-    console.log('Contact form data:', {
-      ...data,
-      _to: import.meta.env.VITE_CONTACT_EMAIL,
-    })
-    toast.success("Thank you! We'll get back to you shortly.", {
-      duration: 4000,
-      style: {
-        background: '#111B30',
-        color: '#E8F0FF',
-        border: '1px solid #1E2D4A',
-      },
-      iconTheme: { primary: '#10B981', secondary: '#E8F0FF' },
-    })
-    reset()
+    try {
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      console.log('Env check:', {
+        serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        })
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: data.name,
+          company: data.company || 'Not provided',
+          email: data.email,
+          phone: data.phone || 'Not provided',
+          service: data.service || 'Not specified',
+          message: data.message,
+          to_email: import.meta.env.VITE_CONTACT_EMAIL, // Your receiving email
+        },
+        publicKey
+      )
+
+      // Success toast
+      toast.success("Thank you! We'll get back to you shortly.", {
+        duration: 4000,
+        style: {
+          background: '#111B30',
+          color: '#E8F0FF',
+          border: '1px solid #1E2D4A',
+        },
+        iconTheme: { primary: '#10B981', secondary: '#E8F0FF' },
+      })
+
+      // Reset form
+      reset()
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      
+      // Error toast
+      toast.error('Failed to send message. Please try again.', {
+        duration: 4000,
+        style: {
+          background: '#111B30',
+          color: '#E8F0FF',
+          border: '1px solid #1E2D4A',
+        },
+        iconTheme: { primary: '#EF4444', secondary: '#E8F0FF' },
+      })
+    }
   }
 
   const inputClass = (field) =>

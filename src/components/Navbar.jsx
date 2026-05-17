@@ -11,36 +11,45 @@ export default function Navbar() {
   const navRef = useRef(null)
   const location = useLocation()
 
-  // Scroll listener → add glass bg
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // GSAP fade-in from top on mount
   useEffect(() => {
     if (!navRef.current) return
     gsap.fromTo(navRef.current, { y: -60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', delay: 0.1 })
   }, [])
 
-  // Close mobile menu on route change
-  useEffect(() => { setMenuOpen(false) }, [location])
+  // useEffect(() => { setMenuOpen(false) }, [location])
+
+  const handleNavClick = () => {
+  window.scrollTo({ top: 0, behavior: 'instant' })
+  setMenuOpen(false)
+}
 
   return (
     <>
       <nav
         ref={navRef}
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-10 py-4 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-10 py-3 transition-all duration-300 ${
           scrolled
-            ? 'bg-brand-navy/95 backdrop-blur-md border-b border-brand-border shadow-lg shadow-brand-navy/50'
-            : 'bg-transparent'
+            ? 'bg-white/95 backdrop-blur-md border-b border-brand-border shadow-sm'
+            : 'bg-white/80 backdrop-blur-sm border-b border-brand-border/50'
         }`}
       >
         {/* Logo */}
-        <Link to="/" className="font-display text-xl font-bold tracking-tight select-none">
-          <span className="text-brand-blue">AG</span>
-          <span className="text-brand-light"> Design Solutions</span>
+        <Link to="/" className="flex items-center gap-2.5 select-none">
+          <img
+            src="/logo.jpeg"
+            alt="AG Design Solutions Logo"
+            className="h-10 w-10 object-contain rounded-sm"
+          />
+          <span className="font-display font-bold text-base leading-tight hidden sm:block">
+            <span className="text-brand-blue">AG</span>
+            <span className="text-brand-light"> Design Solutions</span>
+          </span>
         </Link>
 
         {/* Desktop links */}
@@ -48,6 +57,7 @@ export default function Navbar() {
           {NAV_LINKS.map(({ label, path }) => (
             <li key={path}>
               <Link
+
                 to={path}
                 className={`text-sm transition-colors duration-200 relative group ${
                   location.pathname === path ? 'text-brand-blue' : 'text-brand-muted hover:text-brand-light'
@@ -92,13 +102,14 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="fixed top-[68px] left-0 right-0 z-40 bg-brand-dark/98 backdrop-blur-xl border-b border-brand-border overflow-hidden"
+            className="fixed top-[64px] left-0 right-0 z-40 bg-white border-b border-brand-border shadow-lg overflow-hidden"
           >
             <div className="flex flex-col px-6 py-6 gap-5">
               {NAV_LINKS.map(({ label, path }) => (
                 <Link
                   key={path}
                   to={path}
+                  onClick={handleNavClick}
                   className={`font-display text-lg font-semibold transition-colors ${
                     location.pathname === path ? 'text-brand-blue' : 'text-brand-light'
                   }`}
@@ -108,10 +119,12 @@ export default function Navbar() {
               ))}
               <Link
                 to="/contact"
+                onClick={handleNavClick}
                 className="inline-block mt-2 bg-gradient-cta text-white text-sm font-semibold px-5 py-3 rounded-lg text-center"
               >
                 Get a Quote
               </Link>
+
             </div>
           </motion.div>
         )}

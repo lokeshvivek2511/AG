@@ -1,8 +1,8 @@
 // ─── SITE META ────────────────────────────────────────────────
 export const SITE_NAME = 'AG Design Solutions'
 export const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://agdesignsolutions.com'
-export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '917639143077'
-export const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL || 'contact@agdesignsolutions.com'
+export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '917094239343'
+export const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL || 'agdesignsolutionstn@gmail.com'
 
 // ─── NAVIGATION ───────────────────────────────────────────────
 export const NAV_LINKS = [
@@ -15,11 +15,11 @@ export const NAV_LINKS = [
 
 // ─── COMPANY INFO ─────────────────────────────────────────────
 export const CONTACT_INFO = {
-  corporate: '60, Sakthi Garden, Nagarpalayam, Gobichettipalayam – 638452',
-  plant: 'S.no. 64/1b2, Orathur main road, Orathur village, Padappai, Sriperumbudur tk, Kancheepuram district – 603 203',
-  emails: ['sales@agdesignsolutions.com', 'info@agdesignsolutions.com'],
-  phones: ['+91 76391 43077', '+91 70942 39343'],
-  mapEmbed: 'https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d15538.511744826434!2d80.3101676!3d13.185843199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a52f717a8eb6d89%3A0x48a3553908182001!2sLogic%20Design%20Solutions%2C%2064%2F1B2%2C%20Orathur%20Main%20Rd%2C%20Padappai%2C%20Tamil%20Nadu%20603203!3m2!1d12.8530155!2d80.0177035!5e0!3m2!1sen!2sin!4v1774852227593!5m2!1sen!2sin',
+  corporate: 'No.82 B/2,Gandhi Road,Aalapakkam, New Perungalathur 600063',
+  plant: ' –ThirumudivakkamIndustrial Estate, ,Sirukalathur 600 069',
+  emails: ['agdesignsolutionstn@gmail.com'],
+  phones: ['+91  7094239343'],
+  mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.210051877232!2d80.11019580000001!3d12.894210699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f88e9e42d9d%3A0x6f63ad2feea033b0!2sAG%20Design%20Solutions!5e0!3m2!1sen!2sin!4v1779034321550!5m2!1sen!2sin',
 }
 
 // ─── HOME STATS ───────────────────────────────────────────────
@@ -71,7 +71,7 @@ export const SERVICES = [
     desc: 'Structural, Mould, Jig & Fixture, Assembly, Sheet Metal, Motion Study, Testing & Simulation, Manufacturing Drawings.',
     img: 'https://placehold.co/600x400/111B30/1E6FE8?text=Design+Services',
     path: '/designing',
-    cta: 'View Designing →',
+    cta: 'View Designing',
     color: '1E6FE8',
   },
   {
@@ -79,7 +79,7 @@ export const SERVICES = [
     desc: 'Plastic, Metal, Wooden, Corrugated, and Consumable packaging solutions for every industry.',
     img: 'https://placehold.co/600x400/111B30/4F46E5?text=Packaging+Solutions',
     path: '/integrated-packaging',
-    cta: 'View Packaging →',
+    cta: 'View Packaging',
     color: '4F46E5',
   },
   {
@@ -87,7 +87,7 @@ export const SERVICES = [
     desc: 'Custom-built machines: Bottle Cap Vadding, Conveyor Systems, Can Filling Lines, Cap Pressing, Vertical FFS and more.',
     img: 'https://placehold.co/600x400/111B30/06B6D4?text=SPM+Manufacturing',
     path: '/spm',
-    cta: 'View SPMs →',
+    cta: 'View SPMs',
     color: '06B6D4',
   },
 ]
@@ -107,24 +107,24 @@ export const SECTORS = [
 
 // ─── DESIGNING PAGE ───────────────────────────────────────────
 export const DESIGN_PRODUCT_TILES = [
-  { name: 'Structural',   color: '1E6FE8', img: 'https://placehold.co/400x300/111B30/1E6FE8?text=Structural' },
-  { name: 'Mould',        color: '4F46E5', img: 'https://placehold.co/400x300/111B30/4F46E5?text=Mould' },
-  { name: 'Jig & Fixture',color: '06B6D4', img: 'https://placehold.co/400x300/111B30/06B6D4?text=Jig+%26+Fixture' },
-  { name: 'Assembly',     color: '1E6FE8', img: 'https://placehold.co/400x300/111B30/1E6FE8?text=Assembly' },
-  { name: 'Sheet Metal',  color: '4F46E5', img: 'https://placehold.co/400x300/111B30/4F46E5?text=Sheet+Metal' },
-  { name: 'Motion Study', color: '06B6D4', img: 'https://placehold.co/400x300/111B30/06B6D4?text=Motion+Study' },
+  { name: 'Structural',   color: '#8bf2a5', img: '../../public/Reference_Image/Structural.jpg' },
+  { name: 'Mould',        color: '4F46E5', img: '../../public/Reference_Image/Mould.webp' },
+  { name: 'Jig & Fixture',color: '06B6D4', img: '../../public/Reference_Image/Jig_Fixture.avif' },
+  { name: 'Assembly',     color: '1E6FE8', img: '../../public/Reference_Image/Assembly.jpg' },
+  { name: 'Sheet Metal',  color: '4F46E5', img: '../../public/Reference_Image/sheet_metal.jpg' },
+  { name: 'Motion Study', color: '06B6D4', img: '../../public/Reference_Image/motion-studys.webp' },
 ]
 
 export const DESIGN_TESTING_TILES = [
-  { name: 'Static',  color: '10B981', img: 'https://placehold.co/400x300/111B30/10B981?text=Static' },
-  { name: 'Dynamic', color: '10B981', img: 'https://placehold.co/400x300/111B30/10B981?text=Dynamic' },
-  { name: 'Flow',    color: '10B981', img: 'https://placehold.co/400x300/111B30/10B981?text=Flow' },
+  { name: 'Static',  color: '10B981', img: '../../public/Reference_Image/Static.png' },
+  { name: 'Dynamic', color: '10B981', img: '../../public/Reference_Image/dynamic.webp' },
+  { name: 'Flow',    color: '10B981', img: '../../public/Reference_Image/flow.jpg' },
 ]
 
 export const DESIGN_DRAWING_TILES = [
-  { name: 'Profile Product',  color: 'F97316', img: 'https://placehold.co/400x300/111B30/F97316?text=Profile+Product' },
-  { name: 'Single Product',   color: 'F97316', img: 'https://placehold.co/400x300/111B30/F97316?text=Single+Product' },
-  { name: 'Assembly Product', color: 'F97316', img: 'https://placehold.co/400x300/111B30/F97316?text=Assembly+Product' },
+  { name: 'Profile Product',  color: 'F97316', img: '../../public/Reference_Image/F97316?text=Profile+Product' },
+  { name: 'Single Product',   color: 'F97316', img: '../../public/Reference_Image/F97316?text=Single+Product' },
+  { name: 'Assembly Product', color: 'F97316', img: '../../public/Reference_Image/F97316?text=Assembly+Product' },
 ]
 
 // ─── PACKAGING PAGE ───────────────────────────────────────────
@@ -132,34 +132,52 @@ export const PACKAGING_TABS = [
   { key: 'plastic',     label: 'Plastic Solution' },
   { key: 'metal',       label: 'Metal Solution' },
   { key: 'wooden',      label: 'Wooden & Corrugated' },
-  { key: 'consumables', label: 'Consumables' },
+  // { key: 'consumables', label: 'Consumables' },
 ]
 
 export const PACKAGING_DATA = {
-  plastic: {
-    color: '1E6FE8',
-    items: [
-      'FLC Smooth Wall','PSB','FLC Ribbed Wall','Veg Crate','Rigid Crate','Foldable Crate',
-      'Crate With Lid','Crate With Poly Cover','Pallet Collar','PP Box','PP Dunnage',
-      'Crate With HDPE Dunnage','VF Tray','VF Tray',
-    ],
-  },
-  metal: {
-    color: '4F46E5',
-    items: ['Metal Pallet','Foldable Mesh Bin','Customized Metal Bin','Metal Trolley','Metal Trolley'],
-  },
-  wooden: {
-    color: 'F97316',
-    items: [
-      'Wooden Pallet','Wooden Box','Wooden Collar','Wooden Crate Box',
-      'Wooden Pallet with Metal Sleeve','RSC Corrugated Box',
-      'Export Heavy Duty Corrugated Box','Export Heavy Duty Corrugated Box',
-    ],
-  },
-  consumables: {
-    color: '10B981',
-    items: ['Stretch Film','Bopp Tape','Pet Strap','VCI','XLPE Foam','EPE Foam','PU Foam'],
-  },
+plastic: [
+  { name: 'FLC Smooth Wall', color: '1E6FE8', img: '../../public/Reference_Image/flc_smooth_wall.webp' },
+  { name: 'PSB', color: '1E6FE8', img: '../../public/Reference_Image/psb_1.jpg' },
+  { name: 'FLC Ribbed Wall', color: '1E6FE8', img: '../../public/Reference_Image/flc_ribbed_wall.webp' },
+  { name: 'Veg Crate', color: '1E6FE8', img: '../../public/Reference_Image/VEG_CRATE.avif' },
+  { name: 'Rigid Crate', color: '1E6FE8', img: '../../public/Reference_Image/Rigid_Crate.jpg' },
+  { name: 'Foldable Crate', color: '1E6FE8', img: '../../public/Reference_Image/Foldable_Crate.avif' },
+  { name: 'Crate With Lid', color: '1E6FE8', img: '../../public/Reference_Image/Crate_With_Lid.jpg' },
+  { name: 'Crate With Poly Cover', color: '1E6FE8', img: '../../public/Reference_Image/Crate_With_Poly_Cover.avif' },
+  { name: 'Pallet Collar', color: '1E6FE8', img: '../../public/Reference_Image/Pallet_Collar.jpg' },
+  { name: 'PP Box', color: '1E6FE8', img: '../../public/Reference_Image/pp_box.webp' },
+  { name: 'PP Dunnage', color: '1E6FE8', img: '../../public/Reference_Image/PP_Dunnage.avif' },
+  { name: 'Crate With HDPE Dunnage', color: '1E6FE8', img: '../../public/Reference_Image/Crate_With_HDPE_Dunnage.avif' },
+  { name: 'VF Tray', color: '1E6FE8', img: '../../public/Reference_Image/VF_Tray.jpg' },
+],
+
+metal: [
+  { name: 'Metal Pallet', color: '4F46E5', img: '../../public/Reference_Image/metal_pallet.avif' },
+  { name: 'Foldable Mesh Bin', color: '4F46E5', img: '../../public/Reference_Image/Foldable_Mesh_Bin.avif' },
+  { name: 'Customized Metal Bin', color: '4F46E5', img: '../../public/Reference_Image/Customized-Metal-Bin.webp' },
+  { name: 'Metal Trolley', color: '4F46E5', img: '../../public/Reference_Image/Metal-Trolley.webp' },
+],
+
+wooden: [
+  { name: 'Wooden Pallet', color: 'F97316', img: '../../public/Reference_Image/wooden_pallet.avif' },
+  { name: 'Wooden Box', color: 'F97316', img: '../../public/Reference_Image/wooden_box.jpg' },
+  { name: 'Wooden Collar', color: 'F97316', img: '../../public/Reference_Image/woode_collar.avif' },
+  { name: 'Wooden Crate Box', color: 'F97316', img: '../../public/Reference_Image/wooden_crate.jpg' },
+  { name: 'Wooden Pallet with Metal Sleeve', color: 'F97316', img: '../../public/Reference_Image/Wooden_Pallet_with_metal_sleeve.webp' },
+  { name: 'RSC Corrugated Box', color: 'F97316', img: '../../public/Reference_Image/rsc_box.webp' },
+  { name: 'Export Heavy Duty Corrugated Box', color: 'F97316', img: '../../public/Reference_Image/Export_Heavy_Duty_corrugated_Box.jpg' },
+],
+
+// consumables: [
+//   { name: 'Stretch Film', color: '10B981', img: '../../public/Reference_Image/10B981?text=Stretch+Film' },
+//   { name: 'Bopp Tape', color: '10B981', img: '../../public/Reference_Image/10B981?text=Bopp+Tape' },
+//   { name: 'Pet Strap', color: '10B981', img: '../../public/Reference_Image/10B981?text=Pet+Strap' },
+//   { name: 'VCI', color: '10B981', img: '../../public/Reference_Image/10B981?text=VCI' },
+//   { name: 'XLPE Foam', color: '10B981', img: '../../public/Reference_Image/10B981?text=XLPE+Foam' },
+//   { name: 'EPE Foam', color: '10B981', img: '../../public/Reference_Image/10B981?text=EPE+Foam' },
+//   { name: 'PU Foam', color: '10B981', img: '../../public/Reference_Image/10B981?text=PU+Foam' },
+// ],
 }
 
 // ─── SPM PAGE ─────────────────────────────────────────────────
@@ -167,37 +185,37 @@ export const SPMS = [
   {
     name: 'Bottle Cap Vadding',
     desc: 'Precision machine for applying and compressing bottle cap vadding at high throughput speeds.',
-    img: 'https://placehold.co/500x350/111B30/1E6FE8?text=Bottle+Cap+Vadding',
+    img: '../../public/Reference_Image/Bottle-Cap-Pressing-Vadding-1.webp',
     color: '1E6FE8',
   },
   {
     name: 'Elevated Conveyor',
     desc: 'Multi-level conveyor system for seamless product transfer between floors and production stages.',
-    img: 'https://placehold.co/500x350/111B30/4F46E5?text=Elevated+Conveyor',
+    img: '../../public/Reference_Image/Elevated_Conveyor.webp',
     color: '4F46E5',
   },
   {
     name: 'Can Filling Line',
     desc: 'Automated line for accurate can filling, sealing, and labelling operations at scale.',
-    img: 'https://placehold.co/500x350/111B30/06B6D4?text=Can+Filling+Line',
+    img: '../../public/Reference_Image/Can_Filling_Line.webp',
     color: '06B6D4',
   },
   {
     name: 'Cap Pressing Machine',
     desc: 'High-force pressing machine engineered for consistent cap fitting on containers of all sizes.',
-    img: 'https://placehold.co/500x350/111B30/1E6FE8?text=Cap+Pressing+Machine',
+    img: '../../public/Reference_Image/Cap-Pressing-Machine.webp',
     color: '1E6FE8',
   },
   {
     name: 'Roller Bed Conveyor',
     desc: 'Heavy-duty roller conveyor for industrial material handling and assembly line applications.',
-    img: 'https://placehold.co/500x350/111B30/F97316?text=Roller+Bed+Conveyor',
+    img: '../../public/Reference_Image/Roller-Bed-Conveyor.webp',
     color: 'F97316',
   },
   {
     name: 'Vertical FFS',
     desc: 'Vertical Form Fill Seal machine for flexible pouching of powders, granules, and liquids.',
-    img: 'https://placehold.co/500x350/111B30/10B981?text=Vertical+FFS',
+    img: '../../public/Reference_Image/Vertical-FFS.webp',
     color: '10B981',
   },
 ]
@@ -206,5 +224,5 @@ export const SPMS = [
 export const SOCIAL_LINKS = [
   { icon: 'Linkedin',  href: 'https://www.linkedin.com/company/ag-design-solutions',  label: 'LinkedIn' },
   { icon: 'Instagram', href: 'https://www.instagram.com/agdesignsolutions',            label: 'Instagram' },
-  { icon: 'Youtube',   href: '#',                                                      label: 'YouTube' },
+  { icon: 'Youtube',   href: 'https://youtube.com/@agdesignsolutions-3d?si=0EzJO-pdlJTrP0CP', label: 'YouTube' },
 ]
