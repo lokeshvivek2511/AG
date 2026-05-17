@@ -139,7 +139,7 @@ export const PACKAGING_TABS = [
 
 export const PACKAGING_DATA = {
 plastic: [
-  { name: 'FLC Smooth Wall', color: '1E6FE8', img: {PATH}+'/flc_smooth_wall.webp' },
+  { name: 'FLC Smooth Wall', color: '1E6FE8', img: '/Reference_Image/flc_smooth_wall.webp' },
   { name: 'PSB', color: '1E6FE8', img: {PATH}+'/psb_1.jpg' },
   { name: 'FLC Ribbed Wall', color: '1E6FE8', img: {PATH}+'/flc_ribbed_wall.webp' },
   { name: 'Veg Crate', color: '1E6FE8', img: {PATH}+'/VEG_CRATE.avif' },
