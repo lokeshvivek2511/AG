@@ -110,7 +110,7 @@ export const SECTORS = [
 // ─── DESIGNING PAGE ───────────────────────────────────────────
 export const DESIGN_PRODUCT_TILES = [
   { name: `Structural`,   color: `#8bf2a5`, img: `${PATH}/Structural.jpg` },
-  { name: `Mould`,        color: `4F46E5`, img: `${PATH}/Mould.webp` },
+  { name: `Mould`,        color: `4F46E5`, img: `${PATH}/mould.webp` },
   { name: `Jig & Fixture`,color: `06B6D4`, img: `${PATH}/Jig_Fixture.avif` },
   { name: `Assembly`,     color: `1E6FE8`, img: `${PATH}/Assembly.jpg` },
   { name: `Sheet Metal`,  color: `4F46E5`, img: `${PATH}/sheet_metal.jpg` },
