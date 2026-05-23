@@ -32,23 +32,20 @@ export default function GalleryGrid({ items = [], cols = 3 }) {
           transition={{ duration: 0.25 }}
           className="rounded-xl overflow-hidden bg-white border"
           style={{
-            borderColor: '#E2E8F0',
+            borderColor: '#ffffff',
             boxShadow: '0 2px 8px rgba(30,60,130,0.05)',
-            borderTop: '7px solid #2b8c48',
+            borderTop: '1px solid #ffffff',
           }}
         >
           {/* Image */}
-          <div className="overflow-hidden">
-           <motion.img
+          <div className="overflow-hidden bg-white">
+            <motion.img
               whileHover={{ scale: 1.04 }}
               transition={{ duration: 0.35 }}
               src={item.img}
               alt={item.name}
               loading="lazy"
-              className="w-full aspect-[4/3] object-cover block"
-              style={{
-                filter: "drop-shadow(0px 8px 24px rgba(46, 139, 87, 0.55))",
-              }}
+              className="w-full aspect-[4/3] object-contain block"
             />
           </div>
 
@@ -57,7 +54,7 @@ export default function GalleryGrid({ items = [], cols = 3 }) {
             {/* Tiny gear dot accent */}
             <span
               className="w-2 h-2 rounded-full flex-shrink-0"
-              style={{ background: `#${item.color || '1E3C82'}` }}
+              style={{ background: `# ` }}
             />
             <p className="text-sm font-semibold" style={{ color: '#0F1F3D' }}>{item.name}</p>
           </div>

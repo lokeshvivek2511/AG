@@ -44,7 +44,7 @@ function SPMCard({ name, desc, img, color }) {
           src={img}
           alt={name}
           loading="lazy"
-          className="w-full aspect-[10/7] object-cover block"
+          className="w-full aspect-[10/7] object-contain block"
         />
       </div>
       <div className="p-5">
