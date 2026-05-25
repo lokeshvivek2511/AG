@@ -21,7 +21,7 @@ export const CONTACT_INFO = {
   plant: ` –ThirumudivakkamIndustrial Estate, ,Sirukalathur 600 069`,
   emails: [`agdesignsolutionstn@gmail.com`],
   phones: [`+91  7094239343`],
-  mapEmbed: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.210051877232!2d80.11019580000001!3d12.894210699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f88e9e42d9d%3A0x6f63ad2feea033b0!2sAG%20Design%20Solutions!5e0!3m2!1sen!2sin!4v1779034321550!5m2!1sen!2sin`,
+  mapEmbed: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2099617494623!2d80.1101194!3d12.894216499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f88e9e42d9d%3A0x6f63ad2feea033b0!2sAG%20Design%20Solutions!5e0!3m2!1sen!2sin!4v1779677384823!5m2!1sen!2sin`,
 }
 
 // ─── HOME STATS ───────────────────────────────────────────────
@@ -225,6 +225,6 @@ export const SPMS = [
 // ─── SOCIAL LINKS ─────────────────────────────────────────────
 export const SOCIAL_LINKS = [
   { icon: `Linkedin`,  href: `https://www.linkedin.com/company/ag-design-solutions`,  label: `LinkedIn` },
-  { icon: `Instagram`, href: `https://www.instagram.com/agdesignsolutions`,            label: `Instagram` },
+  { icon: `Instagram`, href: `'https://www.instagram.com/ag_designsolutions?igsh=MTB0dHg3NTFnZHRncg%3D%3D`,            label: `Instagram` },
   { icon: `Youtube`,   href: `https://youtube.com/@agdesignsolutions-3d?si=0EzJO-pdlJTrP0CP`, label: `YouTube` },
 ]
