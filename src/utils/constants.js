@@ -225,6 +225,6 @@ export const SPMS = [
 // ─── SOCIAL LINKS ─────────────────────────────────────────────
 export const SOCIAL_LINKS = [
   { icon: `Linkedin`,  href: `https://www.linkedin.com/company/ag-design-solutions`,  label: `LinkedIn` },
-  { icon: `Instagram`, href: `'https://www.instagram.com/ag_designsolutions?igsh=MTB0dHg3NTFnZHRncg%3D%3D`,            label: `Instagram` },
+  { icon: `Instagram`, href: `https://www.instagram.com/ag_designsolutions?igsh=MTB0dHg3NTFnZHRncg%3D%3D`,            label: `Instagram` },
   { icon: `Youtube`,   href: `https://youtube.com/@agdesignsolutions-3d?si=0EzJO-pdlJTrP0CP`, label: `YouTube` },
 ]
