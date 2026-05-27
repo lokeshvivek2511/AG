@@ -205,7 +205,7 @@ export const SPMS = [
   {
     name: `Cap Pressing Machine`,
     desc: `High-force pressing machine engineered for consistent cap fitting on containers of all sizes.`,
-    img: `${PATH}/Cap-Pressing-Machine.webp`,
+    img: `${PATH}/Cap-Pressing-Machine.png`,
     color: `1E6FE8`,
   },
   {
